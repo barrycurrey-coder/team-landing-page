@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f2f2ef;
+}
+
+/* Header */
+.team-section h2 {
+  margin: 0;
+  padding: 40px 0;
+  background: #76ad5e;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card */
+.team-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Avatar */
+.team-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Name link */
+.team-card a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #009bee;
+  font-weight: 500;
+}
