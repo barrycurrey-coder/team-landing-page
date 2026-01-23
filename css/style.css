@@ -1,0 +1,134 @@
+/* style.css */
+
+/* ---- Base reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+
+  --radius: 18px;
+  --shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 450px at 10% 10%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(700px 350px at 90% 20%, rgba(99, 102, 241, 0.10), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 60%);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* ---- Card ---- */
+.card {
+  width: min(420px, 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 26px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle top accent bar */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+}
+
+/* soft glow blob */
+.card::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: -120px;
+  top: -140px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18), transparent 60%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* ---- Avatar ---- */
+.avatar {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.14);
+  background: #fff;
+  margin: 10px auto 14px;
+  display: block;
+}
+
+/* ---- Typography ---- */
+.name {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.username {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---- Bio ---- */
+.bio {
+  margin: 0 auto;
+  max-width: 34ch;
+  color: rgba(17, 24, 39, 0.78);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Optional: nice hover (desktop) ---- */
+@media (hover: hover) {
+  .card {
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 70px rgba(17, 24, 39, 0.16);
+  }
+}
+
+/* ---- Accessible focus if you later add links/buttons ---- */
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+/* ---- Respect reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
