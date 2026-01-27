@@ -5,14 +5,18 @@
 
 body {
   margin: 0;
-  background: #f2f2ef;
+  background: #2c3139;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Header */
 .team-section h2 {
   margin: 0;
   padding: 40px 0;
-  background: #76ad5e;
+  background: #1b1e23;
   color: #fff;
   text-align: center;
   font-size: 2.5rem;
@@ -31,7 +35,7 @@ body {
 
 /* Card */
 .team-card {
-  background: #ffffff;
+  background: #4e5867;
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
@@ -49,7 +53,7 @@ body {
 /* Name link */
 .team-card a {
   display: inline-block;
-  font-size: 1.1rem;
-  color: #009bee;
+  font-size: 2rem;
+  color: #ffffff;
   font-weight: 500;
 }
