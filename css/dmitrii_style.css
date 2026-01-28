@@ -21,13 +21,23 @@
   
   /* Card */
   .card {
-    background: #ffffff;
     width: 300px;
     padding: 24px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  
+    opacity: 0.9;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
   }
+  
+  .card:hover {
+    opacity: 1;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  
   
   /* Avatar */
   .avatar {
@@ -75,10 +85,12 @@
     text-align: center;
     display: block;
     cursor: pointer;
+    opacity: 0.9;
   }
   
   .back-btn:hover {
     background-color: #555;
+    opacity: 1;
   }
 
   /* bubbles background */
@@ -110,6 +122,32 @@
     );
     pointer-events: none;
   }
+
+  /* Bubble counter */
+  .counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .counter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   
 
   /* animation */
@@ -121,6 +159,36 @@
       transform: translateY(-120vh);
     }
   }
+
+  /* Music button */
+  .music-btn {
+    margin-top: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #2c5364, #203a43);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .music-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  }
+
+  .music-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* playing state */
+  .music-btn.playing {
+    background: linear-gradient(145deg, #1cb5e0, #000851);
+  }
+
 
   .wrapper {
     position: relative;

@@ -7,6 +7,10 @@
 </head>
 <body>
   <div class="bubbles"></div>
+  <div class="counter" id="bubble-counter">
+    🫧 <span id="bubble-count">0</span>
+  </div>
+  
 
   <div class="wrapper">
     <div class="card">
@@ -20,13 +24,22 @@
       <p class="username">Dmitrikosenkov.s@gmail.com</p>
 
       <p class="bio">
-        Backend developer. Loves good code
+        Backend developer. Loves developing games and writing music.
       </p>
+      <button class="music-btn" id="music-btn" aria-label="Toggle music">
+        ▶
+      </button>
+      
+      <audio id="bg-music" loop>
+        <source src="../audio/Deep_Ocean.mp3" type="audio/mpeg">
+      </audio>      
+      
     </div>
 
     <a href="../index.html" class="back-btn">Back</a>
   </div>
   <script src="../js/bubbles.js"></script>
+  
 </body>
 
 </html>
